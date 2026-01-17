@@ -82,8 +82,17 @@ body {
     100% { opacity: 0.6; }
 }
 
-/* ========== TABS ANIMATIONS ========== */
+/* ================= TABS ================= */
 
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background: #111;
+    padding: 1rem;
+}
+
+/* شكل الزر */
 .tab {
     background: none;
     border: 2px solid #ffd700;
@@ -91,26 +100,42 @@ body {
     padding: 0.6rem 1.4rem;
     cursor: pointer;
     border-radius: 8px;
-    transition: 0.3s ease;
+    font-size: 0.95rem;
+    transition: background 0.3s ease, color 0.3s ease;
     position: relative;
+
+    /* حركة خفيفة جدًا */
+    animation: tabPulse 3s ease-in-out infinite;
+    will-change: transform;
 }
 
-
-.tab.active {
-    animation: activePulse 1.5s ease-in-out infinite;
-}
-
+/* حركة بسيطة لا تبوّظ الشكل */
 @keyframes tabPulse {
     0%   { transform: translateY(0); }
-    50%  { transform: translateY(-3px); }
+    50%  { transform: translateY(-2px); }
     100% { transform: translateY(0); }
 }
 
+/* الزر النشط */
+.tab.active {
+    background: #ffd700;
+    color: #000;
+    animation: activePulse 1.8s ease-in-out infinite;
+}
+
+/* إضاءة خفيفة للزر النشط */
 @keyframes activePulse {
     0%   { box-shadow: 0 0 0 rgba(255,215,0,0.4); }
-    50%  { box-shadow: 0 0 15px rgba(255,215,0,0.8); }
+    50%  { box-shadow: 0 0 12px rgba(255,215,0,0.8); }
     100% { box-shadow: 0 0 0 rgba(255,215,0,0.4); }
 }
+
+/* Hover */
+.tab:hover {
+    background: #ffd700;
+    color: #000;
+}
+
 
 
 /* Menu Grid */
@@ -254,6 +279,7 @@ body {
         font-size: 0.95rem;
     }
 }
+
 
 
 
