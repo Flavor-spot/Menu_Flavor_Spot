@@ -29,13 +29,14 @@ body {
     display: flex;
     flex-direction: column; /* صورة فوق النص */
     align-items: center;
-    gap: 0.4rem;
+    gap: 1rem;
 }
 
 .logo-img {
     width: 120px;     /* حجم اللوجو */
     height: auto;
     object-fit: contain;
+    margin-bottom: 0.3rem; 
     animation: logoIntro 2.5s ease forwards; /* نفس حركة النص */
 }
 
@@ -322,6 +323,7 @@ body {
         font-size: 0.95rem;
     }
 }
+
 
 
 
