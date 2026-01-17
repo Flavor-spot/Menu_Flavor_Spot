@@ -180,6 +180,19 @@ body {
     font-size: 1.3rem;
 }
 
+.map-link {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #ffd700;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.map-link:hover {
+    background-color: #ffd700;
+    color: #000;
+}
+
+
 .footer-item span,
 .footer-item a {
     color: #ffffff;
@@ -219,5 +232,6 @@ body {
         font-size: 0.95rem;
     }
 }
+
 
 
