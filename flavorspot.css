@@ -27,18 +27,18 @@ body {
 
 .logo-container {
     display: flex;
-    flex-direction: column; /* صورة فوق النص */
-    align-items: center;
-    gap: 0rem;
+    flex-direction: column;
+    align-items: center;       /* يوسّط الصورة والنص */
+    justify-content: center;
 }
 
 .logo-img {
-    width: 120px;     /* حجم اللوجو */
+    width: 80px;               /* حجم أصغر للوجو */
     height: auto;
     object-fit: contain;
-    margin-bottom: -0.9rem; 
-    animation: logoIntro 2.5s ease forwards; /* نفس حركة النص */
+    transform: translateY(5px); /* يحرك الصورة شوية لأسفل تجاه النص */
 }
+
 
 .logo {
     font-size: 3rem;
@@ -323,6 +323,7 @@ body {
         font-size: 0.95rem;
     }
 }
+
 
 
 
