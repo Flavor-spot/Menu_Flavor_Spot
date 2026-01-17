@@ -33,10 +33,11 @@ body {
 }
 
 .logo-img {
-    width: 80px;               /* حجم أصغر للوجو */
+    width: 120px;
     height: auto;
     object-fit: contain;
-    transform: translateY(5px); /* يحرك الصورة شوية لأسفل تجاه النص */
+    position: relative;
+    top: 5px; /* حرك الصورة 5px لأسفل تجاه النص */
 }
 
 
@@ -323,6 +324,7 @@ body {
         font-size: 0.95rem;
     }
 }
+
 
 
 
