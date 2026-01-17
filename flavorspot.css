@@ -134,6 +134,14 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Hide animation */
+.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s ease;
+}
+
+
 /* Responsive */
 @media (min-width: 768px) {
     .menu-grid { grid-template-columns: repeat(2, 1fr); }
@@ -211,4 +219,5 @@ body {
         font-size: 0.95rem;
     }
 }
+
 
