@@ -29,7 +29,7 @@ body {
     display: flex;
     flex-direction: column; /* صورة فوق النص */
     align-items: center;
-    gap: 1rem;
+    gap: 0.4rem;
 }
 
 .logo-img {
@@ -322,6 +322,7 @@ body {
         font-size: 0.95rem;
     }
 }
+
 
 
 
