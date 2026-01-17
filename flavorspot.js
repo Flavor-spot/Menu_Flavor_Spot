@@ -35,20 +35,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuGrid = document.querySelector(".menu-grid");
 
     function renderMenu(category) {
+    menuGrid.classList.add("fade-out");
+
+    setTimeout(() => {
         menuGrid.innerHTML = "";
+
         menuData[category].forEach(item => {
-            menuGrid.innerHTML += `
-                <div class="menu-item">
-                    <img src="${item.img}" loading="lazy">
-                    <div class="menu-item-content">
-                        <h3>${item.name}</h3>
-                        <p>${item.desc}</p>
-                        <span class="price">${item.price}</span>
-                    </div>
+            const div = document.createElement("div");
+            div.className = "menu-item";
+            div.innerHTML = `
+                <img src="${item.img}" loading="lazy">
+                <div class="menu-item-content">
+                    <h3>${item.name}</h3>
+                    <p>${item.desc}</p>
+                    <span class="price">${item.price}</span>
                 </div>
             `;
+            menuGrid.appendChild(div);
         });
-    }
+
+        menuGrid.classList.remove("fade-out");
+    }, 300);
+}
+
 
     tabs.forEach(tab => {
         tab.addEventListener("click", () => {
@@ -65,3 +74,4 @@ document.addEventListener("DOMContentLoaded", () => {
         renderMenu("pasta");
     }, 2500);
 });
+
