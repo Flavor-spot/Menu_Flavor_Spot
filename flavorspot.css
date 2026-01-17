@@ -36,6 +36,40 @@ body {
     100% { opacity: 1; transform: scale(1); }
 }
 
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.runner {
+    font-size: 3rem;
+    animation: run 1s infinite linear;
+}
+
+/* حركة جري */
+@keyframes run {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateX(5px) rotate(-10deg);
+    }
+    50% {
+        transform: translateX(10px) rotate(10deg);
+    }
+    75% {
+        transform: translateX(5px) rotate(-10deg);
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+
+
+
 /* Main Menu */
 .hidden { display: none; }
 
@@ -211,3 +245,4 @@ body {
         font-size: 0.95rem;
     }
 }
+
