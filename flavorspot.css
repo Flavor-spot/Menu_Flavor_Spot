@@ -84,12 +84,15 @@ body {
 
 /* ================= TABS ================= */
 
+/* ================= TABS ================= */
 .tabs {
     display: flex;
-    justify-content: center;
+    justify-content: center;   /* يوسّط الأزرار أفقياً */
     gap: 1rem;
     background: #111;
     padding: 1rem;
+    flex-wrap: wrap;           /* يسمح للأزرار بالانتقال لسطر جديد على الشاشات الصغيرة */
+    text-align: center;        /* ضمان التوسيط في بعض المتصفحات */
 }
 
 /* شكل الزر */
@@ -104,16 +107,8 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
     position: relative;
 
-    /* حركة خفيفة جدًا */
     animation: tabPulse 3s ease-in-out infinite;
     will-change: transform;
-}
-
-/* حركة بسيطة لا تبوّظ الشكل */
-@keyframes tabPulse {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-2px); }
-    100% { transform: translateY(0); }
 }
 
 /* الزر النشط */
@@ -123,6 +118,19 @@ body {
     animation: activePulse 1.8s ease-in-out infinite;
 }
 
+/* Hover */
+.tab:hover {
+    background: #ffd700;
+    color: #000;
+}
+
+/* حركة خفيفة جدًا */
+@keyframes tabPulse {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-2px); }
+    100% { transform: translateY(0); }
+}
+
 /* إضاءة خفيفة للزر النشط */
 @keyframes activePulse {
     0%   { box-shadow: 0 0 0 rgba(255,215,0,0.4); }
@@ -130,11 +138,15 @@ body {
     100% { box-shadow: 0 0 0 rgba(255,215,0,0.4); }
 }
 
-/* Hover */
-.tab:hover {
-    background: #ffd700;
-    color: #000;
+/* ======== Responsive ======== */
+@media (max-width: 480px) {
+    .tabs {
+        flex-direction: column;   /* الأزرار في عمود على الموبايل */
+        align-items: center;      /* يوسّط الأزرار عمودياً */
+        gap: 0.8rem;
+    }
 }
+
 
 
 
@@ -279,6 +291,7 @@ body {
         font-size: 0.95rem;
     }
 }
+
 
 
 
