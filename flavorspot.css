@@ -85,9 +85,16 @@ body {
 /* ========== TABS ANIMATIONS ========== */
 
 .tab {
+    background: none;
+    border: 2px solid #ffd700;
+    color: #ffd700;
+    padding: 0.6rem 1.4rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease;
     position: relative;
-    animation: tabPulse 4s ease-in-out infinite;
 }
+
 
 .tab.active {
     animation: activePulse 1.5s ease-in-out infinite;
@@ -247,6 +254,7 @@ body {
         font-size: 0.95rem;
     }
 }
+
 
 
 
