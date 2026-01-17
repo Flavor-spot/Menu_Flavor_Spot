@@ -37,7 +37,7 @@ body {
     height: auto;
     object-fit: contain;
     position: relative;
-    top: 5px; /* حرك الصورة 5px لأسفل تجاه النص */
+    top: 25px; /* حرك الصورة 5px لأسفل تجاه النص */
 }
 
 
@@ -324,6 +324,7 @@ body {
         font-size: 0.95rem;
     }
 }
+
 
 
 
