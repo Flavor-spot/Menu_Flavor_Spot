@@ -1,3 +1,4 @@
+ HEAD
 document.addEventListener("DOMContentLoaded", () => {
 
     const menuData = {
@@ -74,5 +75,3 @@ document.addEventListener("DOMContentLoaded", () => {
         renderMenu("pasta");
     }, 2500);
 });
-
-
