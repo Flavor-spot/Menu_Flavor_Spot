@@ -6,7 +6,7 @@
             name: "Spaghetti Carbonara",
             desc: "Creamy pasta with bacon and eggs.",
             price: "120 EGP",
-            img: "img/spaghetti-carbonara.jpg"
+            img: "img/Spaghetti Carbonara.jpg.jpg"
         },
         {
             name: "Penne Arrabbiata",
