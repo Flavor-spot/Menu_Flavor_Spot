@@ -12,7 +12,7 @@
             name: "Penne Arrabbiata",
             desc: "Spicy tomato sauce with penne.",
             price: "100 EGP",
-            img: "img/pennearrabbiata.jpg"
+            img: "img/PenneArrabbiata.jpg"
         },
         {
             name: "Fettuccine Alfredo",
@@ -36,7 +36,7 @@
             name: "Mac & Cheese",
             desc: "Cheesy comfort pasta.",
             price: "95 EGP",
-            img: "img/mac&cheese111.jpg"
+            img: "img/Mac&Cheese111.jpg"
         }
     ],
 
