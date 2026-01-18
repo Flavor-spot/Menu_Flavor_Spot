@@ -84,37 +84,37 @@
             name: "Chocolate Cake",
             desc: "Rich chocolate cake.",
             price: "85 EGP",
-            img: "img/chocolatecake.jpg"
+            img: "img/ChocolateCake.jpg"
         },
         {
             name: "Cheesecake",
             desc: "Creamy cheesecake with sauce.",
             price: "80 EGP",
-            img: "img/cheesecake.jpg"
+            img: "img/Creamycheesecake.jpg"
         },
         {
             name: "Brownie",
             desc: "Fudgy chocolate brownie.",
             price: "60 EGP",
-            img: "img/brownie.jpg"
+            img: "img/Brownie.jpg"
         },
         {
             name: "Tiramisu",
             desc: "Classic Italian dessert.",
             price: "90 EGP",
-            img: "img/tiramisu.jpg"
+            img: "img/Tiramisu.jpg"
         },
         {
             name: "Ice Cream",
             desc: "Vanilla ice cream scoop.",
             price: "45 EGP",
-            img: "img/icecream.jpg"
+            img: "img/IceCream.jpg"
         },
         {
             name: "Panna Cotta",
             desc: "Soft creamy dessert.",
             price: "85 EGP",
-            img: "img/pannacotta.jpg"
+            img: "img/PannaCotta.jpg"
         }
     ]
 };
