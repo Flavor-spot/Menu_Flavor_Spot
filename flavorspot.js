@@ -12,13 +12,13 @@
             name: "Penne Arrabbiata",
             desc: "Spicy tomato sauce with penne.",
             price: "100 EGP",
-            img: "img/penne-arrabbiata.jpg"
+            img: "img/pennearrabbiata.jpg"
         },
         {
             name: "Fettuccine Alfredo",
             desc: "Rich cream sauce with chicken.",
             price: "135 EGP",
-            img: "img/fettuccine-alfredo.jpg"
+            img: "img/fettuccinealfredo.jpg"
         },
         {
             name: "Lasagna",
@@ -30,13 +30,13 @@
             name: "Pesto Pasta",
             desc: "Basil pesto with cherry tomatoes.",
             price: "110 EGP",
-            img: "img/pesto-pasta.jpg"
+            img: "img/pestopasta.jpg"
         },
         {
             name: "Mac & Cheese",
             desc: "Cheesy comfort pasta.",
             price: "95 EGP",
-            img: "img/mac-and-cheese.jpg"
+            img: "img/mac&cheese111.jpg"
         }
     ],
 
