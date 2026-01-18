@@ -1,358 +1,447 @@
  /* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #000;
-    color: #fff;
-    overflow-x: hidden;
-}
+ body {
+     font-family: 'Montserrat', sans-serif;
+     background-color: #000;
+     color: #fff;
+     overflow-x: hidden;
+ }
 
-/* Loading Screen */
-.loading-screen {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6); /* نصف شفاف بدل الأسود الكامل */
-    backdrop-filter: blur(8px);      /* تأثير البلور */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    flex-direction: column;
-}
+ /* Loading Screen */
+ .loading-screen {
+     position: fixed;
+     inset: 0;
+     background: rgba(0, 0, 0, 0.6);
+     /* نصف شفاف بدل الأسود الكامل */
+     backdrop-filter: blur(8px);
+     /* تأثير البلور */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 1000;
+     flex-direction: column;
+ }
 
-/* بداية الشاشة ثابتة */
-.logo-container {
-    position: relative;
-    width: 300px; /* حسب الحجم اللي تحبه */
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+ /* بداية الشاشة ثابتة */
+ .logo-container {
+     position: relative;
+     width: 300px;
+     /* حسب الحجم اللي تحبه */
+     height: 150px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
 
-/* اللوجو يتحرك من اليمين */
-.logo-img {
-    width: 120px;
-    height: auto;
-    object-fit: contain;
-    transform: translateX(100vw); /* يبدأ خارج الشاشة يمين */
-    animation: slideFromRight 1.5s ease forwards;
-}
+ /* اللوجو يتحرك من اليمين */
+ .logo-img {
+     width: 120px;
+     height: auto;
+     object-fit: contain;
+     transform: translateX(100vw);
+     /* يبدأ خارج الشاشة يمين */
+     animation: slideFromRight 1.5s ease forwards;
+ }
 
-/* النص يتحرك من الشمال */
-.logo {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #ffd700;
-    transform: translateX(-100vw); /* يبدأ خارج الشاشة شمال */
-    animation: slideFromLeft 1.5s ease forwards;
-}
+ /* النص يتحرك من الشمال */
+ .logo {
+     font-size: 3rem;
+     font-weight: 700;
+     color: #ffd700;
+     transform: translateX(-100vw);
+     /* يبدأ خارج الشاشة شمال */
+     animation: slideFromLeft 1.5s ease forwards;
+ }
 
-/* الأنيميشن: صورة من اليمين */
-@keyframes slideFromRight {
-    0%   { transform: translateX(100vw); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-}
+ /* الأنيميشن: صورة من اليمين */
+ @keyframes slideFromRight {
+     0% {
+         transform: translateX(100vw);
+         opacity: 0;
+     }
 
-/* الأنيميشن: نص من الشمال */
-@keyframes slideFromLeft {
-    0%   { transform: translateX(-100vw); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-}
+     100% {
+         transform: translateX(0);
+         opacity: 1;
+     }
+ }
 
+ /* الأنيميشن: نص من الشمال */
+ @keyframes slideFromLeft {
+     0% {
+         transform: translateX(-100vw);
+         opacity: 0;
+     }
 
-/* النقاط المتحركة تحت اللوجو */
-/* النقاط تحت اللوجو */
-.loading-dots {
-    margin-top: 1rem;
-    display: flex;
-    gap: 0.5rem;
-    opacity: 0; /* تبدأ مخفية */
-    animation: fadeInDots 1.5s ease forwards; /* تظهر تدريجياً */
-    animation-delay: 1.5s; /* تتأخر بعد دخول اللوجو والنص */
-}
-
-.loading-dot {
-    width: 12px;
-    height: 12px;
-    background: #ffd700;
-    border-radius: 50%;
-    display: inline-block;
-    transform: translateY(0);
-    animation: bounce 0.6s infinite alternate;
-}
-
-/* fade in للنقاط */
-@keyframes fadeInDots {
-    0% { opacity: 0; transform: translateY(10px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* bounce animation للنقاط */
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
-}
+     100% {
+         transform: translateX(0);
+         opacity: 1;
+     }
+ }
 
 
+ /* النقاط المتحركة تحت اللوجو */
+ /* النقاط تحت اللوجو */
+ .loading-dots {
+     margin-top: 1rem;
+     display: flex;
+     gap: 0.5rem;
+     opacity: 0;
+     /* تبدأ مخفية */
+     animation: fadeInDots 1.5s ease forwards;
+     /* تظهر تدريجياً */
+     animation-delay: 1.5s;
+     /* تتأخر بعد دخول اللوجو والنص */
+ }
 
-/* Main Menu */
-.hidden { display: none; }
+ .loading-dot {
+     width: 12px;
+     height: 12px;
+     background: #ffd700;
+     border-radius: 50%;
+     display: inline-block;
+     transform: translateY(0);
+     animation: bounce 0.6s infinite alternate;
+ }
 
-.main-menu {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 0.5s ease;
-}
+ /* fade in للنقاط */
+ @keyframes fadeInDots {
+     0% {
+         opacity: 0;
+         transform: translateY(10px);
+     }
 
-.main-menu.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+     100% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
 
-/* Hero */
-.hero {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #000, #333);
-}
-/* ========== HERO ANIMATIONS ========== */
+ /* bounce animation للنقاط */
+ @keyframes bounce {
+     0% {
+         transform: translateY(0);
+     }
 
-.brand-name {
-    font-size: 3rem;
-    color: #ffd700;
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-8px); }
-    100% { transform: translateY(0); }
-}
-
-.slogan {
-    font-size: 1.2rem;
-    opacity: 0.8;
-    animation: glow 2.5s ease-in-out infinite;
-}
-
-@keyframes glow {
-    0%   { opacity: 0.6; }
-    50%  { opacity: 1; }
-    100% { opacity: 0.6; }
-}
-
-/* ================= TABS ================= */
-
-/* ================= TABS ================= */
-.tabs {
-    display: flex;
-    justify-content: center;   /* يوسّط الأزرار أفقياً */
-    gap: 1rem;
-    background: #111;
-    padding: 1rem;
-    flex-wrap: wrap;           /* يسمح للأزرار بالانتقال لسطر جديد على الشاشات الصغيرة */
-    text-align: center;        /* ضمان التوسيط في بعض المتصفحات */
-}
-
-/* شكل الزر */
-.tab {
-    background: none;
-    border: 2px solid #ffd700;
-    color: #ffd700;
-    padding: 0.6rem 1.4rem;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    transition: background 0.3s ease, color 0.3s ease;
-    position: relative;
-
-    animation: tabPulse 3s ease-in-out infinite;
-    will-change: transform;
-}
-
-/* الزر النشط */
-.tab.active {
-    background: #ffd700;
-    color: #000;
-    animation: activePulse 1.8s ease-in-out infinite;
-}
-
-/* Hover */
-.tab:hover {
-    background: #ffd700;
-    color: #000;
-}
-
-/* حركة خفيفة جدًا */
-@keyframes tabPulse {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-2px); }
-    100% { transform: translateY(0); }
-}
-
-/* إضاءة خفيفة للزر النشط */
-@keyframes activePulse {
-    0%   { box-shadow: 0 0 0 rgba(255,215,0,0.4); }
-    50%  { box-shadow: 0 0 12px rgba(255,215,0,0.8); }
-    100% { box-shadow: 0 0 0 rgba(255,215,0,0.4); }
-}
-
-/* ======== Responsive ======== */
-@media (max-width: 480px) {
-    .tabs {
-        flex-direction: row;      /* خليهم صف دائمًا */
-        justify-content: center;  /* يوسّطوا على الشاشة */
-        flex-wrap: wrap;          /* لو الشاشة ضيقة، ينزلوا سطر ثاني */
-        gap: 0.6rem;
-    }
-}
+     100% {
+         transform: translateY(-10px);
+     }
+ }
 
 
-/* Menu Grid */
-.menu-grid {
-    display: grid;
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
-}
+ /* Main Menu */
+ .hidden {
+     display: none;
+ }
 
-.menu-item {
-    background: #fff;
-    color: #000;
-    border-radius: 10px;
-    overflow: hidden;
-    animation: fadeInUp 0.5s ease forwards;
-}
+ .main-menu {
+     opacity: 0;
+     transform: translateY(20px);
+     transition: 0.5s ease;
+ }
 
-.menu-item img {
-    width: 100%;
-    height: 300px;   /* أكبر من 200px */
-    object-fit: cover; 
-    transition: transform 0.3s ease; /* لو عايز تأثير hover */
-}
+ .main-menu.show {
+     opacity: 1;
+     transform: translateY(0);
+ }
 
-.menu-item img:hover {
-    transform: scale(1.05); /* تكبير بسيط على hover */
-}
+ /* Hero */
+ .hero {
+     text-align: center;
+     padding: 4rem 2rem;
+     background: linear-gradient(135deg, #000, #333);
+ }
+
+ /* ========== HERO ANIMATIONS ========== */
+
+ .brand-name {
+     font-size: 3rem;
+     color: #ffd700;
+     animation: float 3s ease-in-out infinite;
+ }
+
+ @keyframes float {
+     0% {
+         transform: translateY(0);
+     }
+
+     50% {
+         transform: translateY(-8px);
+     }
+
+     100% {
+         transform: translateY(0);
+     }
+ }
+
+ .slogan {
+     font-size: 1.2rem;
+     opacity: 0.8;
+     animation: glow 2.5s ease-in-out infinite;
+ }
+
+ @keyframes glow {
+     0% {
+         opacity: 0.6;
+     }
+
+     50% {
+         opacity: 1;
+     }
+
+     100% {
+         opacity: 0.6;
+     }
+ }
+
+ /* ================= TABS ================= */
+
+ /* ================= TABS ================= */
+ .tabs {
+     display: flex;
+     justify-content: center;
+     /* يوسّط الأزرار أفقياً */
+     gap: 1rem;
+     background: #111;
+     padding: 1rem;
+     flex-wrap: wrap;
+     /* يسمح للأزرار بالانتقال لسطر جديد على الشاشات الصغيرة */
+     text-align: center;
+     /* ضمان التوسيط في بعض المتصفحات */
+ }
+
+ /* شكل الزر */
+ .tab {
+     background: none;
+     border: 2px solid #ffd700;
+     color: #ffd700;
+     padding: 0.6rem 1.4rem;
+     cursor: pointer;
+     border-radius: 8px;
+     font-size: 0.95rem;
+     transition: background 0.3s ease, color 0.3s ease;
+     position: relative;
+
+     animation: tabPulse 3s ease-in-out infinite;
+     will-change: transform;
+ }
+
+ /* الزر النشط */
+ .tab.active {
+     background: #ffd700;
+     color: #000;
+     animation: activePulse 1.8s ease-in-out infinite;
+ }
+
+ /* Hover */
+ .tab:hover {
+     background: #ffd700;
+     color: #000;
+ }
+
+ /* حركة خفيفة جدًا */
+ @keyframes tabPulse {
+     0% {
+         transform: translateY(0);
+     }
+
+     50% {
+         transform: translateY(-2px);
+     }
+
+     100% {
+         transform: translateY(0);
+     }
+ }
+
+ /* إضاءة خفيفة للزر النشط */
+ @keyframes activePulse {
+     0% {
+         box-shadow: 0 0 0 rgba(255, 215, 0, 0.4);
+     }
+
+     50% {
+         box-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+     }
+
+     100% {
+         box-shadow: 0 0 0 rgba(255, 215, 0, 0.4);
+     }
+ }
+
+ /* ======== Responsive ======== */
+ @media (max-width: 480px) {
+     .tabs {
+         flex-direction: row;
+         /* خليهم صف دائمًا */
+         justify-content: center;
+         /* يوسّطوا على الشاشة */
+         flex-wrap: wrap;
+         /* لو الشاشة ضيقة، ينزلوا سطر ثاني */
+         gap: 0.6rem;
+     }
+ }
 
 
-.menu-item-content {
-    padding: 1rem;
-}
+ /* Menu Grid */
+ .menu-grid {
+     display: grid;
+     gap: 2rem;
+     padding: 2rem;
+     max-width: 1200px;
+     margin: auto;
+ }
 
-.price {
-    color: #ffd700;
-    font-weight: 700;
-}
+ .menu-item {
+     background: #fff;
+     color: #000;
+     border-radius: 10px;
+     overflow: hidden;
+     animation: fadeInUp 0.5s ease forwards;
+ }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+ .menu-item img {
+     width: 100%;
+     height: 300px;
+     /* أكبر من 200px */
+     object-fit: cover;
+     transition: transform 0.3s ease;
+     /* لو عايز تأثير hover */
+ }
 
-/* Hide animation */
-.fade-out {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 0.3s ease;
-}
-
-
-/* Responsive */
-@media (min-width: 768px) {
-    .menu-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (min-width: 1024px) {
-    .menu-grid { grid-template-columns: repeat(3, 1fr); }
-}
-/* ================= FOOTER ================= */
-.footer {
-    background-color: #0f0f0f;
-    color: #ffffff;
-    padding: 2.5rem 1rem 2rem;
-    margin-top: 3rem;
-    border-top: 2px solid #ffd700;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.8rem;
-}
-
-.footer-item {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    font-size: 1rem;
-}
-
-.footer-item i {
-    color: #ffd700;
-    font-size: 1.3rem;
-}
-
-.map-link {
-    padding: 0.4rem 0.8rem;
-    border: 1px solid #ffd700;
-    border-radius: 20px;
-    font-weight: 500;
-}
-
-.map-link:hover {
-    background-color: #ffd700;
-    color: #000;
-}
+ .menu-item img:hover {
+     transform: scale(1.05);
+     /* تكبير بسيط على hover */
+ }
 
 
-.footer-item span,
-.footer-item a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+ .menu-item-content {
+     padding: 1rem;
+ }
 
-.footer-item a:hover {
-    color: #ffd700;
-}
+ .price {
+     color: #ffd700;
+     font-weight: 700;
+ }
 
-/* Divider line above copyright */
-.footer::after {
-    content: "";
-    display: block;
-    width: 120px;
-    height: 2px;
-    background-color: #ffd700;
-    margin: 1.5rem auto;
-}
+ @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(20px);
+     }
 
-.footer p {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #b5b5b5;
-}
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
 
-/* ============ Responsive ============ */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.2rem;
-    }
+ /* Hide animation */
+ .fade-out {
+     opacity: 0;
+     transform: translateY(20px);
+     transition: 0.3s ease;
+ }
 
-    .footer-item {
-        font-size: 0.95rem;
-    }
-}
+
+ /* Responsive */
+ @media (min-width: 768px) {
+     .menu-grid {
+         grid-template-columns: repeat(2, 1fr);
+     }
+ }
+
+ @media (min-width: 1024px) {
+     .menu-grid {
+         grid-template-columns: repeat(3, 1fr);
+     }
+ }
+
+ /* ================= FOOTER ================= */
+ .footer {
+     background-color: #0f0f0f;
+     color: #ffffff;
+     padding: 2.5rem 1rem 2rem;
+     margin-top: 3rem;
+     border-top: 2px solid #ffd700;
+ }
+
+ .footer-content {
+     max-width: 1200px;
+     margin: 0 auto 1.5rem;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 1.8rem;
+ }
+
+ .footer-item {
+     display: flex;
+     align-items: center;
+     gap: 0.7rem;
+     font-size: 1rem;
+ }
+
+ .footer-item i {
+     color: #ffd700;
+     font-size: 1.3rem;
+ }
+
+ .map-link {
+     padding: 0.4rem 0.8rem;
+     border: 1px solid #ffd700;
+     border-radius: 20px;
+     font-weight: 500;
+ }
+
+ .map-link:hover {
+     background-color: #ffd700;
+     color: #000;
+ }
+
+
+ .footer-item span,
+ .footer-item a {
+     color: #ffffff;
+     text-decoration: none;
+     transition: color 0.3s ease;
+ }
+
+ .footer-item a:hover {
+     color: #ffd700;
+ }
+
+ /* Divider line above copyright */
+ .footer::after {
+     content: "";
+     display: block;
+     width: 120px;
+     height: 2px;
+     background-color: #ffd700;
+     margin: 1.5rem auto;
+ }
+
+ .footer p {
+     text-align: center;
+     font-size: 0.85rem;
+     color: #b5b5b5;
+ }
+
+ /* ============ Responsive ============ */
+ @media (max-width: 768px) {
+     .footer-content {
+         flex-direction: column;
+         align-items: center;
+         gap: 1.2rem;
+     }
+
+     .footer-item {
+         font-size: 0.95rem;
+     }
+ }
