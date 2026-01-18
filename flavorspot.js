@@ -18,19 +18,19 @@
             name: "Fettuccine Alfredo",
             desc: "Rich cream sauce with chicken.",
             price: "135 EGP",
-            img: "img/fettuccinealfredo.jpg"
+            img: "img/FettuccineAlfredo.jpg"
         },
         {
             name: "Lasagna",
             desc: "Layers of pasta, meat and cheese.",
             price: "150 EGP",
-            img: "img/lasagna.jpg"
+            img: "img/Lasagna.jpg"
         },
         {
             name: "Pesto Pasta",
             desc: "Basil pesto with cherry tomatoes.",
             price: "110 EGP",
-            img: "img/pestopasta.jpg"
+            img: "img/PestoPasta.jpg"
         },
         {
             name: "Mac & Cheese",
