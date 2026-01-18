@@ -84,7 +84,7 @@
             name: "Chocolate Cake",
             desc: "Rich chocolate cake.",
             price: "85 EGP",
-            img: "img/chocolate-cake.jpg"
+            img: "img/chocolatecake.jpg"
         },
         {
             name: "Cheesecake",
@@ -108,13 +108,13 @@
             name: "Ice Cream",
             desc: "Vanilla ice cream scoop.",
             price: "45 EGP",
-            img: "img/ice-cream.jpg"
+            img: "img/icecream.jpg"
         },
         {
             name: "Panna Cotta",
             desc: "Soft creamy dessert.",
             price: "85 EGP",
-            img: "img/panna-cotta.jpg"
+            img: "img/pannacotta.jpg"
         }
     ]
 };
