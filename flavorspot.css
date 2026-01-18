@@ -25,28 +25,47 @@ body {
     flex-direction: column;
 }
 
+/* بداية الشاشة ثابتة */
 .logo-container {
+    position: relative;
+    width: 300px; /* حسب الحجم اللي تحبه */
+    height: 150px;
     display: flex;
     flex-direction: column;
-    align-items: center;       /* يوسّط الصورة والنص */
+    align-items: center;
     justify-content: center;
 }
 
+/* اللوجو يتحرك من اليمين */
 .logo-img {
     width: 120px;
     height: auto;
     object-fit: contain;
-    position: relative;
-    top: 25px; /* حرك الصورة 5px لأسفل تجاه النص */
+    transform: translateX(100vw); /* يبدأ خارج الشاشة يمين */
+    animation: slideFromRight 1.5s ease forwards;
 }
 
-
+/* النص يتحرك من الشمال */
 .logo {
     font-size: 3rem;
     font-weight: 700;
     color: #ffd700;
-    animation: logoIntro 2.5s ease forwards;
+    transform: translateX(-100vw); /* يبدأ خارج الشاشة شمال */
+    animation: slideFromLeft 1.5s ease forwards;
 }
+
+/* الأنيميشن: صورة من اليمين */
+@keyframes slideFromRight {
+    0%   { transform: translateX(100vw); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* الأنيميشن: نص من الشمال */
+@keyframes slideFromLeft {
+    0%   { transform: translateX(-100vw); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
 
 /* النقاط المتحركة تحت اللوجو */
 .loading-dots {
