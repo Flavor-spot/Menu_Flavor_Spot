@@ -45,37 +45,37 @@
             name: "Classic Fries",
             desc: "Golden crispy fries.",
             price: "60 EGP",
-            img: "img/Classic Fries.jpg"
+            img: "img/ClassicFries.jpg"
         },
         {
             name: "Cheese Fries",
             desc: "Fries topped with melted cheese.",
             price: "80 EGP",
-            img: "img/Cheese Fries.jpg"
+            img: "img/CheeseFries.jpg"
         },
         {
             name: "Loaded Fries",
             desc: "Cheese, beef & sauce.",
             price: "95 EGP",
-            img: "img//Loaded Fries.jpg"
+            img: "img/LoadedFries.jpg"
         },
         {
             name: "Garlic Fries",
             desc: "Fries with garlic butter.",
             price: "70 EGP",
-            img: "img/Garlic Fries.jpg"
+            img: "img/GarlicFries.jpg"
         },
         {
             name: "Spicy Fries",
             desc: "Fries with spicy seasoning.",
             price: "65 EGP",
-            img: "img/Spicy Fries.jpg"
+            img: "img/SpicyFries.jpg"
         },
         {
             name: "Truffle Fries",
             desc: "Premium truffle flavor.",
             price: "110 EGP",
-            img: "img/Truffle Fries.jpg"
+            img: "img/TruffleFries.jpg"
         }
     ],
 
