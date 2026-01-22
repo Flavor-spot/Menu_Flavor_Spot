@@ -43,32 +43,32 @@ document.addEventListener("DOMContentLoaded", () => {
                 img: "friesimgs/ClassicFries.jpeg"
             },
             {
-                name: "Cheese Fries",
-                desc: "Fries topped with melted cheese.",
+                name: "Crispy Onion",
+                desc: "Golden and crunchy onions, perfect as a topping or snack.",
                 price: "$  EGP",
-                img: "friesimgs/CheeseFries.jpg"
+                img: "friesimgs/CrispyOnion.jpeg"
             },
             {
-                name: "Loaded Fries",
-                desc: "Cheese, beef & sauce.",
+                name: "Spicy Fries",
+                desc: "Hot and flavorful potatoes with a spicy kick.",
                 price: "$  EGP",
-                img: "friesimgs/LoadedFries.jpg"
+                img: "friesimgs/SpicyFries.jpeg"
             },
             
         ],
 
         desserts: [
             {
-                name: "Chocolate Cake",
-                desc: "Rich chocolate cake.",
+                name: "Churros",
+                desc: "Crispy churros served with your choice of white, dark, or mixed chocolate sauce.",
                 price: "$  EGP",
-                img: "dessertimgs/ChocolateCake.jpg"
+                img: "dessertimgs/Churros.jpeg"
             },
             {
-                name: "Cheesecake",
-                desc: "Creamy cheesecake with sauce.",
+                name: "Chocolate Bomboloni",
+                desc: "Soft bomboloni filled with warm melted chocolate, rich and indulgent.",
                 price: "$  EGP",
-                img: "dessertimgs/Creamycheesecake.jpg"
+                img: "dessertimgs/ChocolateBomboloni.jpeg"
             },
             {
                 name: "Brownie",
