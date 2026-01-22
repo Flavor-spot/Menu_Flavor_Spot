@@ -54,24 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 price: "95 EGP",
                 img: "friesimgs/LoadedFries.jpg"
             },
-            {
-                name: "Garlic Fries",
-                desc: "Fries with garlic butter.",
-                price: "70 EGP",
-                img: "friesimgs/GarlicFries.jpg"
-            },
-            {
-                name: "Spicy Fries",
-                desc: "Fries with spicy seasoning.",
-                price: "65 EGP",
-                img: "friesimgs/SpicyFries.jpg"
-            },
-            {
-                name: "Truffle Fries",
-                desc: "Premium truffle flavor.",
-                price: "110 EGP",
-                img: "friesimgs/TruffleFries.jpg"
-            }
+            
         ],
 
         desserts: [
