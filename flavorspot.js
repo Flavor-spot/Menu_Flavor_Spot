@@ -4,19 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
         pasta: [
             {
                 name: "pasta red sauce",
-                desc: "Creamy pasta with bacon and eggs.",
+                desc: "Rich and tangy tomato-based pasta with herbs.",
                 price: "120 EGP",
                 img: "pastaimgs/pastared.jpeg"
             },
             {
                 name: "Pasta White Sauce",
-                desc: "Spicy tomato sauce with penne.",
+                desc: "Creamy and cheesy pasta in a smooth white sauce.",
                 price: "100 EGP",
                 img: "pastaimgs/PastaWhiteSauce.jpeg"
             },
             {
                 name: "Sweet and sour pasta",
-                desc: "Rich cream sauce with chicken.",
+                desc: "Tender pasta tossed in a sweet and tangy sauce.",
                 price: "135 EGP",
                 img: "pastaimgs/Sweetandsourpasta.jpeg"
             },
@@ -32,12 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 price: "110 EGP",
                 img: "pastaimgs/PestoPasta.jpg"
             },
-            {
-                name: "Mac & Cheese",
-                desc: "Cheesy comfort pasta.",
-                price: "95 EGP",
-                img: "pastaimgs/Mac&Cheese111.jpg"
-            }
+           
         ],
 
         fries: [
