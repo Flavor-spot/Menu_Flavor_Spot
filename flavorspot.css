@@ -160,15 +160,49 @@
 
  .spot-with-img {
     display: inline-flex;
+    flex-direction: column;   /* يخلي الصورة فوق الكلمة */
     align-items: center;
-    gap: 8px;
+    line-height: 1;
+    position: relative;
 }
 
 .spot-with-img img {
-    width: 45px;
-    height: auto;
-    transform: translateY(2px);
+    width: 36px;
+    margin-bottom: 6px;
 }
+
+/* ===== Responsive ===== */
+
+/* موبايل */
+@media (max-width: 480px) {
+    .brand-name {
+        font-size: 2.2rem;
+    }
+
+    .spot-with-img img {
+        width: 26px;
+        margin-bottom: 4px;
+    }
+}
+
+/* تابلت */
+@media (min-width: 481px) and (max-width: 768px) {
+    .brand-name {
+        font-size: 2.6rem;
+    }
+
+    .spot-with-img img {
+        width: 30px;
+    }
+}
+
+/* ديسكتوب */
+@media (min-width: 769px) {
+    .spot-with-img img {
+        width: 36px;
+    }
+}
+
 
 /* موبايل */
 @media (max-width: 480px) {
