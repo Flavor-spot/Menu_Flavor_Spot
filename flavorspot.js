@@ -5,32 +5,32 @@ document.addEventListener("DOMContentLoaded", () => {
             {
                 name: "pasta red sauce",
                 desc: "Rich and tangy tomato-based pasta with herbs.",
-                price: "120 EGP",
+                price: "$  EGP",
                 img: "pastaimgs/pastared.jpeg"
             },
             {
                 name: "Pasta White Sauce",
                 desc: "Creamy and cheesy pasta in a smooth white sauce.",
-                price: "100 EGP",
+                price: "$  EGP",
                 img: "pastaimgs/PastaWhiteSauce.jpeg"
             },
             {
                 name: "Sweet and sour pasta",
                 desc: "Tender pasta tossed in a sweet and tangy sauce.",
-                price: "135 EGP",
+                price: "$  EGP",
                 img: "pastaimgs/Sweetandsourpasta.jpeg"
             },
             {
-                name: "Lasagna",
-                desc: "Layers of pasta, meat and cheese.",
-                price: "150 EGP",
-                img: "pastaimgs/Lasagna.jpg"
+                name: "Ranch sauce",
+                desc: "Creamy pasta tossed in a flavorful ranch dressing with herbs.",
+                price: "$  EGP",
+                img: "pastaimgs/Ranchsauce.jpeg"
             },
             {
-                name: "Pesto Pasta",
-                desc: "Basil pesto with cherry tomatoes.",
-                price: "110 EGP",
-                img: "pastaimgs/PestoPasta.jpg"
+                name: "Flavor spot sauce",
+                desc: "A special and unique taste.",
+                price: "$ EGP",
+                img: "pastaimgs/Flavorspotsauce.jpeg"
             },
            
         ],
@@ -39,19 +39,19 @@ document.addEventListener("DOMContentLoaded", () => {
             {
                 name: "Classic Fries",
                 desc: "Golden crispy fries.",
-                price: "60 EGP",
+                price: "$  EGP",
                 img: "friesimgs/ClassicFries.jpg"
             },
             {
                 name: "Cheese Fries",
                 desc: "Fries topped with melted cheese.",
-                price: "80 EGP",
+                price: "$  EGP",
                 img: "friesimgs/CheeseFries.jpg"
             },
             {
                 name: "Loaded Fries",
                 desc: "Cheese, beef & sauce.",
-                price: "95 EGP",
+                price: "$  EGP",
                 img: "friesimgs/LoadedFries.jpg"
             },
             
@@ -61,37 +61,37 @@ document.addEventListener("DOMContentLoaded", () => {
             {
                 name: "Chocolate Cake",
                 desc: "Rich chocolate cake.",
-                price: "85 EGP",
+                price: "$  EGP",
                 img: "dessertimgs/ChocolateCake.jpg"
             },
             {
                 name: "Cheesecake",
                 desc: "Creamy cheesecake with sauce.",
-                price: "80 EGP",
+                price: "$  EGP",
                 img: "dessertimgs/Creamycheesecake.jpg"
             },
             {
                 name: "Brownie",
                 desc: "Fudgy chocolate brownie.",
-                price: "60 EGP",
+                price: "$  EGP",
                 img: "dessertimgs/Brownie.jpg"
             },
             {
                 name: "Tiramisu",
                 desc: "Classic Italian dessert.",
-                price: "90 EGP",
+                price: "$  EGP",
                 img: "dessertimgs/Tiramisu.jpg"
             },
             {
                 name: "Ice Cream",
                 desc: "Vanilla ice cream scoop.",
-                price: "45 EGP",
+                price: "$  EGP",
                 img: "dessertimgs/IceCream.jpg"
             },
             {
                 name: "Panna Cotta",
                 desc: "Soft creamy dessert.",
-                price: "85 EGP",
+                price: "$  EGP",
                 img: "dessertimgs/PannaCotta.jpg"
             }
         ]
