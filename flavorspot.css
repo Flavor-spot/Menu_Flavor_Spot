@@ -158,6 +158,26 @@
      background: linear-gradient(135deg, #000, #333);
  }
 
+ .spot-with-img {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.spot-with-img img {
+    width: 38px;
+    height: auto;
+    transform: translateY(2px);
+}
+
+/* موبايل */
+@media (max-width: 480px) {
+    .spot-with-img img {
+        width: 30px;
+    }
+}
+
+
  /* ========== HERO ANIMATIONS ========== */
 
  .brand-name {
