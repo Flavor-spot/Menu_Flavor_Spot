@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 name: "Classic Fries",
                 desc: "Golden crispy fries.",
                 price: "$  EGP",
-                img: "friesimgs/ClassicFries.jpg"
+                img: "friesimgs/ClassicFries.jpeg"
             },
             {
                 name: "Cheese Fries",
