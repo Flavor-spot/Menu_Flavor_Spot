@@ -7,18 +7,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 desc: "Rich and tangy tomato-based pasta with herbs.",
                 price: "$  EGP",
                 img: "pastaimgs/pastared.jpeg"
+                
             },
             {
                 name: "Pasta White Sauce",
                 desc: "Creamy and cheesy pasta in a smooth white sauce.",
                 price: "$  EGP",
-                img: "pastaimgs/PastaWhiteSauce.jpeg"
+                img: "pastaimgs/PastaWhiteSauce.jpeg",
+                 badge: "best" // 🔥 Best Seller
             },
             {
                 name: "Sweet and sour pasta",
                 desc: "Tender pasta tossed in a sweet and tangy sauce.",
                 price: "$  EGP",
-                img: "pastaimgs/Sweetandsourpasta.jpeg"
+                img: "pastaimgs/Sweetandsourpasta.jpeg",
+                badge: "favorite" //  Customer Favorite
             },
             {
                 name: "Ranch sauce",
@@ -40,13 +43,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 name: "Classic Fries",
                 desc: "Golden crispy fries.",
                 price: "$  EGP",
-                img: "friesimgs/ClassicFries.jpeg"
+                img: "friesimgs/ClassicFries.jpeg",
+                 badge: "best" // 🔥 Best Seller
             },
             {
                 name: "Crispy Onion",
                 desc: "Golden and crunchy onions, perfect as a topping or snack.",
                 price: "$  EGP",
-                img: "friesimgs/CrispyOnion.jpeg"
+                img: "friesimgs/CrispyOnion.jpeg",
+                badge: "favorite" //  Customer Favorite
             },
             {
                 name: "Spicy Fries",
@@ -62,13 +67,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 name: "Churros",
                 desc: "Crispy churros served with your choice of white, dark, or mixed chocolate sauce.",
                 price: "$  EGP",
-                img: "dessertimgs/Churros.jpeg"
+                img: "dessertimgs/Churros.jpeg",
+                badge: "new" //  New
             },
             {
                 name: "Chocolate Bomboloni",
                 desc: "Soft bomboloni filled with warm melted chocolate, rich and indulgent.",
                 price: "$  EGP",
-                img: "dessertimgs/ChocolateBomboloni.jpeg"
+                img: "dessertimgs/ChocolateBomboloni.jpeg",
+                 badge: "best" // 🔥 Best Seller
             },
             {
                 name: "Brownie",
@@ -101,6 +108,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainMenu = document.getElementById("main-menu");
     const tabs = document.querySelectorAll(".tab");
     const menuGrid = document.querySelector(".menu-grid");
+    
+function getBadgeContent(type) {
+    if (type === "best") {
+        return `<i class="fa-solid fa-crown"></i> Best Seller`;
+    }
+    if (type === "favorite") {
+        return `<i class="fa-solid fa-star"></i> Customer Favorite`;
+    }
+    if (type === "new") {
+        return `<i class="fa-solid fa-bolt"></i> New`;
+    }
+}
+
 
     function renderMenu(category) {
         menuGrid.classList.add("fade-out");
@@ -111,14 +131,18 @@ document.addEventListener("DOMContentLoaded", () => {
             menuData[category].forEach(item => {
                 const div = document.createElement("div");
                 div.className = "menu-item";
-                div.innerHTML = `
-                <img src="${item.img}" loading="lazy">
-                <div class="menu-item-content">
-                    <h3>${item.name}</h3>
-                    <p>${item.desc}</p>
-                    <span class="price">${item.price}</span>
-                </div>
-            `;
+               div.innerHTML = `
+<div class="img-wrapper">
+   ${item.badge ? `<span class="badge ${item.badge}">${getBadgeContent(item.badge)}</span>` : ""}
+    <img src="${item.img}" alt="${item.name}" loading="lazy">
+</div>
+
+<div class="menu-item-content">
+    <h3>${item.name}</h3>
+    <p>${item.desc}</p>
+    <span class="price">${item.price}</span>
+</div>
+`;
                 menuGrid.appendChild(div);
             });
 
