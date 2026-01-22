@@ -45,37 +45,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 name: "Classic Fries",
                 desc: "Golden crispy fries.",
                 price: "60 EGP",
-                img: "/friesimgs/ClassicFries.jpg"
+                img: "friesimgs/ClassicFries.jpg"
             },
             {
                 name: "Cheese Fries",
                 desc: "Fries topped with melted cheese.",
                 price: "80 EGP",
-                img: "/friesimgs/CheeseFries.jpg"
+                img: "friesimgs/CheeseFries.jpg"
             },
             {
                 name: "Loaded Fries",
                 desc: "Cheese, beef & sauce.",
                 price: "95 EGP",
-                img: "/friesimgs/LoadedFries.jpg"
+                img: "friesimgs/LoadedFries.jpg"
             },
             {
                 name: "Garlic Fries",
                 desc: "Fries with garlic butter.",
                 price: "70 EGP",
-                img: "/friesimgs/GarlicFries.jpg"
+                img: "friesimgs/GarlicFries.jpg"
             },
             {
                 name: "Spicy Fries",
                 desc: "Fries with spicy seasoning.",
                 price: "65 EGP",
-                img: "/friesimgs/SpicyFries.jpg"
+                img: "friesimgs/SpicyFries.jpg"
             },
             {
                 name: "Truffle Fries",
                 desc: "Premium truffle flavor.",
                 price: "110 EGP",
-                img: "/friesimgs/TruffleFries.jpg"
+                img: "friesimgs/TruffleFries.jpg"
             }
         ],
 
@@ -84,37 +84,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 name: "Chocolate Cake",
                 desc: "Rich chocolate cake.",
                 price: "85 EGP",
-                img: "/dessertimgs/ChocolateCake.jpg"
+                img: "dessertimgs/ChocolateCake.jpg"
             },
             {
                 name: "Cheesecake",
                 desc: "Creamy cheesecake with sauce.",
                 price: "80 EGP",
-                img: "/dessertimgs/Creamycheesecake.jpg"
+                img: "dessertimgs/Creamycheesecake.jpg"
             },
             {
                 name: "Brownie",
                 desc: "Fudgy chocolate brownie.",
                 price: "60 EGP",
-                img: "/dessertimgs/Brownie.jpg"
+                img: "dessertimgs/Brownie.jpg"
             },
             {
                 name: "Tiramisu",
                 desc: "Classic Italian dessert.",
                 price: "90 EGP",
-                img: "/dessertimgs/Tiramisu.jpg"
+                img: "dessertimgs/Tiramisu.jpg"
             },
             {
                 name: "Ice Cream",
                 desc: "Vanilla ice cream scoop.",
                 price: "45 EGP",
-                img: "/dessertimgs/IceCream.jpg"
+                img: "dessertimgs/IceCream.jpg"
             },
             {
                 name: "Panna Cotta",
                 desc: "Soft creamy dessert.",
                 price: "85 EGP",
-                img: "/dessertimgs/PannaCotta.jpg"
+                img: "dessertimgs/PannaCotta.jpg"
             }
         ]
     };
