@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuData = {
         pasta: [
             {
-                name: "Spaghetti Carbonara",
+                name: "pasta red sauce",
                 desc: "Creamy pasta with bacon and eggs.",
                 price: "120 EGP",
-                img: "pastaimgs/SpaghettiCarbonara.jpg"
+                img: "pastaimgs/pastared.jpeg"
             },
             {
                 name: "Penne Arrabbiata",
