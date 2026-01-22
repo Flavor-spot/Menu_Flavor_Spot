@@ -178,7 +178,7 @@
 .spot-with-img img {
     width: 55px;        /* كبرت الصورة */
     display: block;
-    margin: 0 auto;
+    margin-left: 10px;
     transform: none !important;
 }
 
