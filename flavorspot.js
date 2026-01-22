@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 img: "pastaimgs/PastaWhiteSauce.jpeg"
             },
             {
-                name: "Fettuccine Alfredo",
+                name: "Sweet and sour pasta",
                 desc: "Rich cream sauce with chicken.",
                 price: "135 EGP",
-                img: "pastaimgs/FettuccineAlfredo.jpg"
+                img: "pastaimgs/Sweetandsourpasta.jpeg"
             },
             {
                 name: "Lasagna",
