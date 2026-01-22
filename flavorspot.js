@@ -6,37 +6,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 name: "Spaghetti Carbonara",
                 desc: "Creamy pasta with bacon and eggs.",
                 price: "120 EGP",
-                img: "/pastaimgs/SpaghettiCarbonara.jpg"
+                img: "pastaimgs/SpaghettiCarbonara.jpg"
             },
             {
                 name: "Penne Arrabbiata",
                 desc: "Spicy tomato sauce with penne.",
                 price: "100 EGP",
-                img: "/pastaimgs/PenneArrabbiata.jpg"
+                img: "pastaimgs/PenneArrabbiata.jpg"
             },
             {
                 name: "Fettuccine Alfredo",
                 desc: "Rich cream sauce with chicken.",
                 price: "135 EGP",
-                img: "/pastaimgs/FettuccineAlfredo.jpg"
+                img: "pastaimgs/FettuccineAlfredo.jpg"
             },
             {
                 name: "Lasagna",
                 desc: "Layers of pasta, meat and cheese.",
                 price: "150 EGP",
-                img: "/pastaimgs/Lasagna.jpg"
+                img: "pastaimgs/Lasagna.jpg"
             },
             {
                 name: "Pesto Pasta",
                 desc: "Basil pesto with cherry tomatoes.",
                 price: "110 EGP",
-                img: "/pastaimgs/PestoPasta.jpg"
+                img: "pastaimgs/PestoPasta.jpg"
             },
             {
                 name: "Mac & Cheese",
                 desc: "Cheesy comfort pasta.",
                 price: "95 EGP",
-                img: "/pastaimgs/Mac&Cheese111.jpg"
+                img: "pastaimgs/Mac&Cheese111.jpg"
             }
         ],
 
