@@ -6,37 +6,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 name: "Spaghetti Carbonara",
                 desc: "Creamy pasta with bacon and eggs.",
                 price: "120 EGP",
-                img: "/pasta imgs/SpaghettiCarbonara.jpg"
+                img: "/pastaimgs/SpaghettiCarbonara.jpg"
             },
             {
                 name: "Penne Arrabbiata",
                 desc: "Spicy tomato sauce with penne.",
                 price: "100 EGP",
-                img: "/pasta imgs/PenneArrabbiata.jpg"
+                img: "/pastaimgs/PenneArrabbiata.jpg"
             },
             {
                 name: "Fettuccine Alfredo",
                 desc: "Rich cream sauce with chicken.",
                 price: "135 EGP",
-                img: "/pasta imgs/FettuccineAlfredo.jpg"
+                img: "/pastaimgs/FettuccineAlfredo.jpg"
             },
             {
                 name: "Lasagna",
                 desc: "Layers of pasta, meat and cheese.",
                 price: "150 EGP",
-                img: "/pasta imgs/Lasagna.jpg"
+                img: "/pastaimgs/Lasagna.jpg"
             },
             {
                 name: "Pesto Pasta",
                 desc: "Basil pesto with cherry tomatoes.",
                 price: "110 EGP",
-                img: "/pasta imgs/PestoPasta.jpg"
+                img: "/pastaimgs/PestoPasta.jpg"
             },
             {
                 name: "Mac & Cheese",
                 desc: "Cheesy comfort pasta.",
                 price: "95 EGP",
-                img: "/pasta imgs/Mac&Cheese111.jpg"
+                img: "/pastaimgs/Mac&Cheese111.jpg"
             }
         ],
 
@@ -45,37 +45,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 name: "Classic Fries",
                 desc: "Golden crispy fries.",
                 price: "60 EGP",
-                img: "/fries imgs/ClassicFries.jpg"
+                img: "/friesimgs/ClassicFries.jpg"
             },
             {
                 name: "Cheese Fries",
                 desc: "Fries topped with melted cheese.",
                 price: "80 EGP",
-                img: "/fries imgs/CheeseFries.jpg"
+                img: "/friesimgs/CheeseFries.jpg"
             },
             {
                 name: "Loaded Fries",
                 desc: "Cheese, beef & sauce.",
                 price: "95 EGP",
-                img: "/fries imgs/LoadedFries.jpg"
+                img: "/friesimgs/LoadedFries.jpg"
             },
             {
                 name: "Garlic Fries",
                 desc: "Fries with garlic butter.",
                 price: "70 EGP",
-                img: "/fries imgs/GarlicFries.jpg"
+                img: "/friesimgs/GarlicFries.jpg"
             },
             {
                 name: "Spicy Fries",
                 desc: "Fries with spicy seasoning.",
                 price: "65 EGP",
-                img: "/fries imgs/SpicyFries.jpg"
+                img: "/friesimgs/SpicyFries.jpg"
             },
             {
                 name: "Truffle Fries",
                 desc: "Premium truffle flavor.",
                 price: "110 EGP",
-                img: "/fries imgs/TruffleFries.jpg"
+                img: "/friesimgs/TruffleFries.jpg"
             }
         ],
 
@@ -84,37 +84,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 name: "Chocolate Cake",
                 desc: "Rich chocolate cake.",
                 price: "85 EGP",
-                img: "/dessert imgs/ChocolateCake.jpg"
+                img: "/dessertimgs/ChocolateCake.jpg"
             },
             {
                 name: "Cheesecake",
                 desc: "Creamy cheesecake with sauce.",
                 price: "80 EGP",
-                img: "/dessert imgs/Creamycheesecake.jpg"
+                img: "/dessertimgs/Creamycheesecake.jpg"
             },
             {
                 name: "Brownie",
                 desc: "Fudgy chocolate brownie.",
                 price: "60 EGP",
-                img: "/dessert imgs/Brownie.jpg"
+                img: "/dessertimgs/Brownie.jpg"
             },
             {
                 name: "Tiramisu",
                 desc: "Classic Italian dessert.",
                 price: "90 EGP",
-                img: "/dessert imgs/Tiramisu.jpg"
+                img: "/dessertimgs/Tiramisu.jpg"
             },
             {
                 name: "Ice Cream",
                 desc: "Vanilla ice cream scoop.",
                 price: "45 EGP",
-                img: "/dessert imgs/IceCream.jpg"
+                img: "/dessertimgs/IceCream.jpg"
             },
             {
                 name: "Panna Cotta",
                 desc: "Soft creamy dessert.",
                 price: "85 EGP",
-                img: "/dessert imgs/PannaCotta.jpg"
+                img: "/dessertimgs/PannaCotta.jpg"
             }
         ]
     };
