@@ -176,9 +176,10 @@
 }
 
 .spot-with-img img {
-    width: 55px;        /* كبرت الصورة */
+    width: 80px;        /* كبرت الصورة */
+    height: px;
     display: block;
-    margin-left: 10px;
+    margin-left: 29px;
     transform: none !important;
 }
 
