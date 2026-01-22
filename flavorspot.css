@@ -158,18 +158,33 @@
      background: linear-gradient(135deg, #000, #333);
  }
 
- .spot-with-img {
-    display: inline-flex;
-    flex-direction: column;   /* يخلي الصورة فوق الكلمة */
+ .brand-name {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 14px;
+    text-align: center;
+    font-size: 3rem;
+    color: #ffd700;
+}
+
+.spot-with-img {
+    display: flex;
+    flex-direction: column;   /* الصورة فوق الكلمة */
     align-items: center;
     line-height: 1;
-    position: relative;
 }
 
 .spot-with-img img {
-    width: 36px;
+    width: 38px;
     margin-bottom: 6px;
 }
+
+.spot-text {
+    font-size: inherit;
+}
+
+
 
 /* ===== Responsive ===== */
 
