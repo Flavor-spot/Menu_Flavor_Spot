@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 img: "pastaimgs/pastared.jpeg"
             },
             {
-                name: "Penne Arrabbiata",
+                name: "Pasta White Sauce",
                 desc: "Spicy tomato sauce with penne.",
                 price: "100 EGP",
-                img: "pastaimgs/PenneArrabbiata.jpg"
+                img: "pastaimgs/PastaWhiteSauce.jpeg"
             },
             {
                 name: "Fettuccine Alfredo",
