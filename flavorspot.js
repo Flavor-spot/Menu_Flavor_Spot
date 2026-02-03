@@ -25,11 +25,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // بروتين الباستا
     const pastaProteins = [
-        { name: "Chicken", price: 50 },
-        { name: "Beef", price: 50 },
-        { name: "Shrimp", price: 80 },
-        { name: "None", price: 0 }
+        {
+            name: "Chicken",
+            price: 50,
+            img: "extrapasta/Chicken.jpeg",
+            label: "Chicken Pasta"
+        },
+        {
+            name: "Beef",
+            price: 50,
+            img: "extrapasta/Beef.jpeg",
+            label: "Beef Pasta"
+        },
+        {
+            name: "Shrimp",
+            price: 80,
+            img: "extrapasta/Shrimp.jpeg",
+            label: "Shrimp Pasta"
+        },
+        {
+            name: "None",
+            price: 0,
+            img: null,
+            label: null
+        }
     ];
+
 
     // صوصات البطاطس
     const friesSauces = [
@@ -62,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // تحديد هل نضيف زرار
                 let buttonHTML = "";
-                if(category === "pasta" || category === "fries") {
+                if (category === "pasta" || category === "fries") {
                     buttonHTML = `<button class="protein-btn" style="display:block; margin:0 auto; padding:0.5rem 1rem; border:none; border-radius:5px; background:#ffd700; color:#000; cursor:pointer;">
                         ${category === "pasta" ? "Choose Your Protein" : "Choose Your Sauce"}
                     </button>`;
@@ -77,21 +98,28 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="menu-item-content">
     <h3>${item.name}</h3>
     <p>${item.desc}</p>
-    <span class="price" style="display:block; text-align:center; margin: 0.5rem 0;" data-base-price="${parseInt(item.price.replace(/\D/g,'')) || 0}">${item.price}</span>
+    <span class="price" style="display:block; text-align:center; margin: 0.5rem 0;" data-base-price="${parseInt(item.price.replace(/\D/g, '')) || 0}">${item.price}</span>
     ${buttonHTML}
 </div>
 `;
                 menuGrid.appendChild(div);
+                const imgEl = div.querySelector("img");
+                const nameEl = div.querySelector("h3");
+
+                // حفظ الاسم والصورة الأصليين
+                imgEl.dataset.originalImg = item.img;
+                nameEl.dataset.originalName = item.name;
+
 
                 const btn = div.querySelector(".protein-btn");
                 const priceSpan = div.querySelector(".price");
                 let selectedPrice = 0;
 
-                if(btn){
+                if (btn) {
                     btn.addEventListener("click", () => {
-                        if(category === "pasta") {
+                        if (category === "pasta") {
                             openSelectionModal(priceSpan, pastaProteins, selectedPrice, newPrice => selectedPrice = newPrice);
-                        } else if(category === "fries") {
+                        } else if (category === "fries") {
                             openSelectionModal(priceSpan, friesSauces, selectedPrice, newPrice => selectedPrice = newPrice);
                         }
                     });
@@ -105,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("protein-modal");
     let currentPriceSpan;
 
-    function openSelectionModal(priceSpan, options, savedPrice, callback){
+    function openSelectionModal(priceSpan, options, savedPrice, callback) {
         currentPriceSpan = priceSpan;
         modal.style.display = "block";
 
@@ -125,9 +153,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const addBtn = modalContent.querySelector("#add-option-btn");
         const closeBtn = modalContent.querySelector(".close");
 
-        if(savedPrice){
+        if (savedPrice) {
             optionButtons.forEach(btn => {
-                if(parseInt(btn.dataset.price) === savedPrice){
+                if (parseInt(btn.dataset.price) === savedPrice) {
                     btn.checked = true;
                     display.textContent = `Extra: ${savedPrice} EGP`;
                 }
@@ -141,10 +169,50 @@ document.addEventListener("DOMContentLoaded", () => {
         addBtn.onclick = () => {
             const selected = modalContent.querySelector(".option-input:checked");
             const basePrice = parseInt(currentPriceSpan.dataset.basePrice) || 0;
-            const addedPrice = selected ? parseInt(selected.dataset.price) : 0;
-            currentPriceSpan.textContent = `${basePrice + addedPrice} EGP`;
+
+            if (selected) {
+                const addedPrice = parseInt(selected.dataset.price);
+                const index = [...modalContent.querySelectorAll(".option-input")].indexOf(selected);
+                const selectedOption = options[index];
+
+                currentPriceSpan.textContent = `${basePrice + addedPrice} EGP`;
+
+                // تغيير الاسم والصورة
+                const card = currentPriceSpan.closest(".menu-item");
+                const img = card.querySelector("img");
+                const title = card.querySelector("h3");
+
+                if (selectedOption.img) {
+                    // أنيميشن قبل التغيير
+                    img.classList.add("change-animate");
+                    title.classList.add("change-animate");
+
+                    setTimeout(() => {
+                        if (selectedOption.img) {
+                            img.src = selectedOption.img;
+                            title.textContent = selectedOption.label;
+                        } else {
+                            img.src = img.dataset.originalImg;
+                            title.textContent = title.dataset.originalName;
+                        }
+                    }, 180);
+
+                    // إزالة الكلاس بعد الانيميشن
+                    setTimeout(() => {
+                        img.classList.remove("change-animate");
+                        title.classList.remove("change-animate");
+                    }, 500);
+
+                } else {
+                    img.src = img.dataset.originalImg;
+                    title.textContent = title.dataset.originalName;
+                }
+
+                callback(addedPrice);
+            }
+
             modal.style.display = "none";
-            callback(addedPrice);
+
         };
 
         closeBtn.onclick = () => modal.style.display = "none";
