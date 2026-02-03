@@ -123,15 +123,15 @@ function getBadgeContent(type) {
 
 
     function renderMenu(category) {
-        menuGrid.classList.add("fade-out");
+    menuGrid.classList.add("fade-out");
 
-        setTimeout(() => {
-            menuGrid.innerHTML = "";
+    setTimeout(() => {
+        menuGrid.innerHTML = "";
 
-            menuData[category].forEach(item => {
-                const div = document.createElement("div");
-                div.className = "menu-item";
-               div.innerHTML = `
+        menuData[category].forEach(item => {
+            const div = document.createElement("div");
+            div.className = "menu-item";
+            div.innerHTML = `
 <div class="img-wrapper">
    ${item.badge ? `<span class="badge ${item.badge}">${getBadgeContent(item.badge)}</span>` : ""}
     <img src="${item.img}" alt="${item.name}" loading="lazy">
@@ -141,14 +141,16 @@ function getBadgeContent(type) {
     <h3>${item.name}</h3>
     <p>${item.desc}</p>
     <span class="price">${item.price}</span>
+    <button class="select-btn">Choose Protein</button>
 </div>
 `;
-                menuGrid.appendChild(div);
-            });
+            menuGrid.appendChild(div);
+        });
 
-            menuGrid.classList.remove("fade-out");
-        }, 300);
-    }
+        menuGrid.classList.remove("fade-out");
+    }, 300);
+}
+
 
 
     tabs.forEach(tab => {
