@@ -614,7 +614,8 @@
 } 
 
 .select-btn {
-    margin-top: 12px;
+    margin: 12px auto 0; /* يبقى في النص تحت السعر */
+    display: block;
     padding: 0.6rem 1.2rem;
     background-color: #ffd700;
     color: #000;
@@ -623,6 +624,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
+    text-align: center;
 }
 
 .select-btn:hover {
@@ -630,7 +632,122 @@
     transform: scale(1.05);
 }
 
+/* المودال */
+#protein-modal {
+    display: none; /* يبان لما نضغط الزرار */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6); /* خلفية شفافة داكنة */
+    backdrop-filter: blur(3px);
+    transition: all 0.3s ease;
+}
 
+/* المودال */
+#protein-modal {
+    display: none; /* يبان لما نضغط الزرار */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6); /* خلفية شفافة داكنة */
+    backdrop-filter: blur(3px);
+    transition: all 0.3s ease;
+}
 
+/* محتوى المودال */
+#protein-modal .modal-content {
+    background-color: #111;
+    color: #fff;
+    margin: 10% auto;
+    padding: 2rem;
+    border: 2px solid #ffd700;
+    border-radius: 12px;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    animation: fadeIn 0.4s ease;
+}
 
+/* العنوان */
+#protein-modal .modal-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #ffd700;
+}
 
+/* كل اختيار */
+#protein-modal .modal-content label {
+    display: block;
+    margin: 0.6rem 0;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    transition: background 0.2s ease;
+}
+
+#protein-modal .modal-content input[type="radio"] {
+    margin-right: 0.6rem;
+}
+
+/* اختيار مفعّل */
+#protein-modal .modal-content input[type="radio"]:checked + span,
+#protein-modal .modal-content input[type="radio"]:checked {
+    color: #000;
+    background-color: #ffd700;
+}
+
+/* زرار إضافة */
+#protein-modal .modal-content button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: #ffd700;
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#protein-modal .modal-content button:hover {
+    background-color: #e6c200;
+    transform: scale(1.05);
+}
+
+/* زرار إغلاق */
+#protein-modal .modal-content .close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffd700;
+    transition: color 0.2s ease;
+}
+
+#protein-modal .modal-content .close:hover {
+    color: #fff;
+}
+
+/* عرض السعر الإضافي */
+#protein-modal .modal-content #option-price-display {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    color: #ffd700;
+}
+
+/* أنيميشن دخول المودال */
+@keyframes fadeIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
