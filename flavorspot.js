@@ -2,11 +2,172 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const menuData = {
         pasta: [
-            { name: "pasta red sauce", desc: "Rich and tangy tomato-based pasta with herbs.", price: "40 EGP", img: "pastaimgs/pastared.jpeg" },
-            { name: "Pasta White Sauce", desc: "Creamy and cheesy pasta in a smooth white sauce.", price: "55 EGP", img: "pastaimgs/PastaWhiteSauce.jpeg", badge: "best" },
-            { name: "Sweet and sour pasta", desc: "Tender pasta tossed in a sweet and tangy sauce.", price: "65 EGP", img: "pastaimgs/Sweetandsourpasta.jpeg", badge: "favorite" },
-            { name: "Ranch sauce", desc: "Creamy pasta tossed in a flavorful ranch dressing with herbs.", price: "75 EGP", img: "pastaimgs/Ranchsauce.jpeg" },
-            { name: "Flavor spot sauce", desc: "A special and unique taste.", price: "85 EGP", img: "pastaimgs/Flavorspotsauce.jpeg" }
+            {
+                name: "pasta red sauce",
+                desc: "Rich and tangy tomato-based pasta with herbs.",
+                price: "40 EGP",
+                img: "pastaimgs/pastared.jpeg",
+                proteinOptions: [  // هنا البروتينات خاصة بالريد صوص فقط
+                    {
+                        name: "Chicken",
+                        price: 50,
+                        img: "extra_pasta_red_sauce/Chicken.jpeg",
+                        label: "Chicken Pasta"
+                    },
+                    {
+                        name: "Beef",
+                        price: 50,
+                        img: "extra_pasta_red_sauce/Beef.jpeg",
+                        label: "Beef Pasta"
+                    },
+                    {
+                        name: "Shrimp",
+                        price: 80,
+                        img: "extra_pasta_red_sauce/Shrimp.jpeg",
+                        label: "Shrimp Pasta"
+                    },
+                    {
+                        name: "None",
+                        price: 0,
+                        img: null,
+                        label: null
+                    }
+                ]
+            },
+            //Pasta White Sauce
+            {
+                name: "Pasta White Sauce",
+                desc: "Creamy and cheesy pasta in a smooth white sauce.",
+                price: "55 EGP",
+                img: "pastaimgs/PastaWhiteSauce.jpeg",
+                badge: "best",
+                proteinOptions: [  // هنا البروتينات خاصة بالريد صوص فقط
+                    {
+                        name: "Chicken",
+                        price: 50,
+                        img: "extra_Pasta_white_sauce/Chicken.jpeg",
+                        label: "Chicken Pasta"
+                    },
+                    {
+                        name: "Beef",
+                        price: 50,
+                        img: "extra_Pasta_white_sauce/Beef.jpeg",
+                        label: "Beef Pasta"
+                    },
+                    {
+                        name: "Shrimp",
+                        price: 80,
+                        img: "extra_Pasta_white_sauce/Shrimp.jpeg",
+                        label: "Shrimp Pasta"
+                    },
+                    {
+                        name: "None",
+                        price: 0,
+                        img: null,
+                        label: null
+                    }
+                ]
+            },
+            //Sweet and sour pasta
+            {
+                name: "Sweet and sour pasta",
+                desc: "Tender pasta tossed in a sweet and tangy sauce.",
+                price: "65 EGP",
+                img: "pastaimgs/Sweetandsourpasta.jpeg",
+                badge: "favorite",
+                proteinOptions: [  // هنا البروتينات خاصة بالريد صوص فقط
+                    {
+                        name: "Chicken",
+                        price: 50,
+                        img: "extra_sweet_and_sour_pasta/Chicken.jpeg",
+                        label: "Chicken Pasta"
+                    },
+                    {
+                        name: "Beef",
+                        price: 50,
+                        img: "extra_sweet_and_sour_pasta/Beef.jpeg",
+                        label: "Beef Pasta"
+                    },
+                    {
+                        name: "Shrimp",
+                        price: 80,
+                        img: "extra_sweet_and_sour_pasta/Shrimp.jpeg",
+                        label: "Shrimp Pasta"
+                    },
+                    {
+                        name: "None",
+                        price: 0,
+                        img: null,
+                        label: null
+                    }
+                ]
+            },
+            //Ranch sauce
+            {
+                name: "Ranch sauce",
+                desc: "Creamy pasta tossed in a flavorful ranch dressing with herbs.",
+                price: "75 EGP",
+                img: "pastaimgs/Ranchsauce.jpeg",
+                proteinOptions: [  // هنا البروتينات خاصة بالريد صوص فقط
+                    {
+                        name: "Chicken",
+                        price: 50,
+                        img: "extra_ranch_sauce/Chicken.jpeg",
+                        label: "Chicken Pasta"
+                    },
+                    {
+                        name: "Beef",
+                        price: 50,
+                        img: "extra_ranch_sauce/Beef.jpeg",
+                        label: "Beef Pasta"
+                    },
+                    {
+                        name: "Shrimp",
+                        price: 80,
+                        img: "extra_ranch_sauce/Shrimp.jpeg",
+                        label: "Shrimp Pasta"
+                    },
+                    {
+                        name: "None",
+                        price: 0,
+                        img: null,
+                        label: null
+                    }
+                ]
+            },
+            //Flavor spot sauce
+            {
+                name: "Flavor spot sauce",
+                desc: "A special and unique taste.",
+                price: "85 EGP",
+                img: "pastaimgs/Flavorspotsauce.jpeg",
+                proteinOptions: [  // هنا البروتينات خاصة بالريد صوص فقط
+                    {
+                        name: "Chicken",
+                        price: 50,
+                        img: "extra_flavor_spot_sauce/Chicken.jpeg",
+                        label: "Chicken Pasta"
+                    },
+                    {
+                        name: "Beef",
+                        price: 50,
+                        img: "extra_flavor_spot_sauce/Beef.jpeg",
+                        label: "Beef Pasta"
+                    },
+                    {
+                        name: "Shrimp",
+                        price: 80,
+                        img: "extra_flavor_spot_sauce/Shrimp.jpeg",
+                        label: "Shrimp Pasta"
+                    },
+                    {
+                        name: "None",
+                        price: 0,
+                        img: null,
+                        label: null
+                    }
+                ]
+            }
         ],
         fries: [
             { name: "Classic Fries", desc: "Golden crispy fries.", price: "25 EGP", img: "friesimgs/ClassicFries.jpeg", badge: "best" },
@@ -23,33 +184,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
     };
 
-    // بروتين الباستا
-    const pastaProteins = [
-        {
-            name: "Chicken",
-            price: 50,
-            img: "extrapasta/Chicken.jpeg",
-            label: "Chicken Pasta"
-        },
-        {
-            name: "Beef",
-            price: 50,
-            img: "extrapasta/Beef.jpeg",
-            label: "Beef Pasta"
-        },
-        {
-            name: "Shrimp",
-            price: 80,
-            img: "extrapasta/Shrimp.jpeg",
-            label: "Shrimp Pasta"
-        },
-        {
-            name: "None",
-            price: 0,
-            img: null,
-            label: null
-        }
-    ];
 
 
     // صوصات البطاطس
@@ -106,7 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const imgEl = div.querySelector("img");
                 const nameEl = div.querySelector("h3");
 
-                // حفظ الاسم والصورة الأصليين
+                
                 imgEl.dataset.originalImg = item.img;
                 nameEl.dataset.originalName = item.name;
 
@@ -117,13 +251,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (btn) {
                     btn.addEventListener("click", () => {
-                        if (category === "pasta") {
-                            openSelectionModal(priceSpan, pastaProteins, selectedPrice, newPrice => selectedPrice = newPrice);
-                        } else if (category === "fries") {
-                            openSelectionModal(priceSpan, friesSauces, selectedPrice, newPrice => selectedPrice = newPrice);
+                        if (category === "pasta" && item.proteinOptions) {
+                            // يفتح المودال ببروتينات هذا الطبق فقط
+                            openSelectionModal(priceSpan, item.proteinOptions, selectedPrice, newPrice => selectedPrice = newPrice, item, imgEl);
+                        } else {
+                            alert("No protein options available for this pasta.");
                         }
                     });
                 }
+
             });
 
             menuGrid.classList.remove("fade-out");

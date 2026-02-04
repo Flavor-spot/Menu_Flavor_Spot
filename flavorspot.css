@@ -756,7 +756,7 @@
 
 /* Animation عند تغيير البروتين */
 .change-animate {
-    animation: changeItem 0.45s ease;
+    animation: changeItem 0.95s ease;
 }
 
 @keyframes changeItem {
