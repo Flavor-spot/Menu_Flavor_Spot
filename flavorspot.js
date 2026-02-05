@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const imgEl = div.querySelector("img");
                 const nameEl = div.querySelector("h3");
 
-                
+
                 imgEl.dataset.originalImg = item.img;
                 nameEl.dataset.originalName = item.name;
 
@@ -333,7 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         }
                     }, 180);
 
-                    // إزالة الكلاس بعد الانيميشن
+                    // مسح الكلاس بعد الانيميشن
                     setTimeout(() => {
                         img.classList.remove("change-animate");
                         title.classList.remove("change-animate");
